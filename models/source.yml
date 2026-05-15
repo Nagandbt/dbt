@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: source_dev # Optional: override default database
+    schema: jaffle_shop    # Schema where the raw data lives
+    tables:
+      - name: orders
+      - name: customers
+
+  - name: jaffle_shop_stripe
+    database: source_dev # Optional: override default database
+    schema: stripe    # Schema where the raw data lives
+    tables:
+      - name: payment
+
+  - name: tb_101
+    description: 'Point of Sale source data'
+    database: source_dev
+    schema: tasty_bytes
+    tables:
+    - name: COUNTRY
+      description: 'Country reference data'
+    - name: FRANCHISE
+      description: 'Franchise ownership data'
+    - name: LOCATION
+      description: 'Business locations data'
+    - name: MENU
+      description: 'Food menu items data'
+    - name: ORDER_DETAIL
+      description: 'Order line item details'
+    - name: ORDER_HEADER
+      description: 'Order header information'
+    - name: CUSTOMER_LOYALTY
+      description: ''
+    - name: TRUCK
+      description: ''
